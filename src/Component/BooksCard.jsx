@@ -5,6 +5,7 @@ import styles from "./BooksCard.module.css"
 
 // eslint-disable-next-line react/prop-types
 function BooksCard({ data, HandelLikedList }) {
+    // eslint-disable-next-line react/prop-types
     const { title, author, image, language, pages } = data;
 
     const [like, setLike] = useState(false);
