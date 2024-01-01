@@ -4,11 +4,13 @@ import { AiFillHeart } from "react-icons/ai"
 import styles from "./BooksCard.module.css"
 
 // eslint-disable-next-line react/prop-types
-function BooksCard({ data: { title, author, image, language, pages } }) {
+function BooksCard({ data, HandelLikedList }) {
+    const { title, author, image, language, pages } = data;
 
     const [like, setLike] = useState(false);
 
     const likeHandeler = () => {
+        HandelLikedList(data, like);
         setLike((like) => !like);
     }
 
